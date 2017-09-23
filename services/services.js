@@ -97,6 +97,12 @@ function  fetchUsers(req, res, next) {
 	next();
 }
 
+function notifyusers(req, res, next) {
+
+
+    next();
+}
+
 module.exports = {
 	fetchNews: fetchNews,
 	createNews: createNews,

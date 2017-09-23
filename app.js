@@ -24,6 +24,7 @@ function wrap(func) {
 
 setupNewsServices();
 setupSignUpServices();
+setupNotificationServices();
 
 function setupSignUpServices() {
 	let SIGNUP_PATH = '/signup';
@@ -40,4 +41,10 @@ function setupNewsServices() {
 
 	server.post(NEWS_CREATE_PATH, wrap(services.createNews));
 	server.get(NEWS_PATH, wrap(services.fetchNews));
+}
+
+function setupNotificationServices() {
+    let NOTIFICATION_PATH = '/notification';
+
+    server.post(NOTIFICATION_PATH, wrap(services.notifyUsers))
 }
